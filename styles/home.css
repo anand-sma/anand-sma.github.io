@@ -2,6 +2,7 @@
   --primary-clr: #092834; /*Maastricht Blue*/
   --primary-clr-t: #09283455; /*Transparent Maastricht Blue*/
   --secondary-clr: #fff; /*Full White*/
+  --secondary2-clr: #aaa;
   --bg1-clr: #347b98; /*Teal Blue*/
   --bg2-clr: #1489b8; /*Cyan Cornflower Blue*/
   --font-size: 12px;
@@ -342,31 +343,76 @@ a:visited {
 .about-header {
   padding: 0.5em;
   margin: 0.3em;
+  font-size: calc(var(--font-size) + 2.7vw);
 }
 
 .about-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em;
+  padding: 2em 1em 1em 1em;
   margin: 0.3em;
+  background: var(--primary-clr);
+  border-radius: 20rem 20rem 0rem 0rem / 5rem 5rem 0rem 0rem;
 }
 
-.img-wrap {
+.about-image-wrap {
   padding: 0.5em;
   margin: 0.3em;
-  margin-right: 2em;
+
   background: url('/assets/hero-image.jpg');
-  background-blend-mode: multiply;
+
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 15rem;
   height: 20em;
   display: flex;
   align-items: flex-end;
+  border-radius: 20rem 20rem 0rem 0rem / 5rem 5rem 0rem 0rem;
+}
+
+.about-image-wrap > h2 {
+  color: var(--primary-clr);
+  background: linear-gradient(
+    to right,
+    Transparent,
+    var(--primary-clr-t) 50%,
+    var(--bg1-clr) 80%
+  );
 }
 
 .about-info {
+  max-width: 40rem;
   padding: 0.5em;
   margin: 0.3em;
   margin-left: 2em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+
+.about-para {
+  grid-column: span 2;
+}
+
+.about-para h2,
+.about-para h3,
+.about-para p {
+  margin: 0.3em 0;
+  padding: 0.3em 0;
+}
+
+.secondary2-clr {
+  color: var(--secondary2-clr);
+}
+
+.about-info-card {
+  border-radius: 0.5rem;
+  padding: 0.3em;
+  background: linear-gradient(
+    to left,
+    var(--primary-clr) 0%,
+    var(--bg1-clr) 140%
+  );
 }
