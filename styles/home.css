@@ -2,7 +2,7 @@
   --primary-clr: #092834; /*Maastricht Blue*/
   --primary-clr-t: #09283455; /*Transparent Maastricht Blue*/
   --secondary-clr: #fff; /*Full White*/
-  --secondary2-clr: #aaa;
+  --secondary2-clr: #cfcfcf;
   --bg1-clr: #347b98; /*Teal Blue*/
   --bg2-clr: #1489b8; /*Cyan Cornflower Blue*/
   --font-size: 12px;
@@ -55,7 +55,7 @@ body {
   );
   border-top-left-radius: 100%;
   clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
-  min-height: 100vh;
+  min-height: 96vh;
   min-width: 80vw;
   position: absolute;
   right: 0;
@@ -341,9 +341,11 @@ a:visited {
 }
 
 .about-header {
-  padding: 0.5em;
-  margin: 0.3em;
+  padding: 0.3em;
+  width: 100vw;
+  text-align: center;
   font-size: calc(var(--font-size) + 2.7vw);
+  background-color: var(--primary-clr);
 }
 
 .about-body {
@@ -351,8 +353,14 @@ a:visited {
   justify-content: space-between;
   align-items: center;
   padding: 2em 1em 1em 1em;
-  margin: 0.3em;
-  background: var(--primary-clr);
+  margin-top: 3em;
+
+  background: linear-gradient(
+    to right bottom,
+    var(--bg1-clr) 0%,
+    var(--primary-clr-t) 10%,
+    var(--primary-clr) 100%
+  );
   border-radius: 20rem 20rem 0rem 0rem / 5rem 5rem 0rem 0rem;
 }
 
@@ -369,7 +377,7 @@ a:visited {
   height: 20em;
   display: flex;
   align-items: flex-end;
-  border-radius: 20rem 20rem 0rem 0rem / 5rem 5rem 0rem 0rem;
+  border-radius: 20rem 10rem 0rem 0rem / 10rem 1rem 0rem 0rem;
 }
 
 .about-image-wrap > h2 {
@@ -415,4 +423,10 @@ a:visited {
     var(--primary-clr) 0%,
     var(--bg1-clr) 140%
   );
+  transition: all 0.2s;
+}
+.about-info-card:hover {
+  outline: var(--primary-clr) 2px solid;
+  transform: scale(1.1) translate(-1.2rem, -1rem);
+  box-shadow: 1px -1px 0.25px var(--primary-clr-t);
 }

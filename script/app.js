@@ -1,3 +1,4 @@
+//Greetings
 let welcome;
 let date = new Date();
 let hour = date.getHours();
@@ -22,3 +23,12 @@ if (hour < 12) {
 
 let greetings = document.querySelector('.greetings');
 greetings.textContent = welcome;
+
+//Age Calc
+let currentYear = date.getFullYear();
+let yearOfBirth = 1986;
+
+let age = currentYear - yearOfBirth;
+
+let showAge = document.querySelector('.age');
+showAge.textContent = age;
