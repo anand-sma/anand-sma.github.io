@@ -272,18 +272,18 @@ a:visited {
   --time: 25s;
   --amount: 5;
   fill: var(--primary-clr);
-  width: 12rem;
+  width: calc(4.7rem + 8vw);
   outline: var(--primary-clr) 2px solid;
   position: absolute;
-  top: calc(40% + 3vw);
-  left: 50%;
+  top: calc(58% - 4vw);
+  left: 55%;
   transform: translate(-60%, -50%);
 }
 
 .button-wrap {
   position: absolute;
-  top: calc(45% + 7vw);
-  left: calc(42% + 10vw);
+  top: calc(63% - 1vw);
+  left: calc(48% + 10vw);
 
   display: flex;
   align-items: center;
