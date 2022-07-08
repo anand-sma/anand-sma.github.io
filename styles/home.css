@@ -29,7 +29,7 @@ body {
 .body-wrap {
   background: linear-gradient(to top, var(--bg2-clr), var(--bg1-clr));
   border-top-left-radius: 100%;
-  height: 100vh;
+  height: calc(55vh + 25vw);
   min-width: 100%;
   top: 0;
 
@@ -55,7 +55,7 @@ body {
   );
   border-top-left-radius: 100%;
   clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
-  min-height: 96vh;
+  height: calc(55vh + 25vw);
   min-width: 80vw;
   position: absolute;
   right: 0;
@@ -275,15 +275,15 @@ a:visited {
   width: 12rem;
   outline: var(--primary-clr) 2px solid;
   position: absolute;
-  top: 47%;
+  top: calc(40% + 3vw);
   left: 50%;
   transform: translate(-60%, -50%);
 }
 
 .button-wrap {
   position: absolute;
-  top: calc(60% + 0.8vw);
-  left: calc(44.5% + 7.5vw);
+  top: calc(45% + 7vw);
+  left: calc(42% + 10vw);
 
   display: flex;
   align-items: center;
@@ -354,7 +354,6 @@ a:visited {
   align-items: center;
   padding: 2em 1em 1em 1em;
   margin-top: 3em;
-
   background: linear-gradient(
     to right bottom,
     var(--bg1-clr) 0%,
@@ -426,8 +425,8 @@ a:visited {
   display: flex;
   position: absolute;
   left: 27%;
-  top: -13.5%;
-  transform: translateX(-50%);
+  bottom: 0%;
+  transform: translate(-50%, 150%);
 }
 .social-media > div {
   margin: 0.3em;
@@ -436,7 +435,7 @@ a:visited {
   transition: all 0.2s;
 }
 .social-media > div:hover {
-  transform: scale(1.1) translateY(-5px);
+  transform: scale(1.1) translateY(5px);
   border-radius: 50%;
   box-shadow: 2px 2px 20px var(--primary-clr);
 }
