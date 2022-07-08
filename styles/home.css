@@ -418,6 +418,36 @@ a:visited {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1em;
+
+  position: relative;
+}
+
+.social-media {
+  display: flex;
+  position: absolute;
+  left: 27%;
+  top: -13.5%;
+  transform: translateX(-50%);
+}
+.social-media > div {
+  margin: 0.3em;
+  font-size: calc(var(--font-size) + 0.5rem);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.social-media > div:hover {
+  transform: scale(1.1) translateY(-5px);
+  border-radius: 50%;
+  box-shadow: 2px 2px 20px var(--primary-clr);
+}
+.social-media .fa-brands {
+  margin: 0.3em;
+  padding: 0.3em;
+  outline: var(--primary-clr) solid 3px;
+  outline-offset: 2px;
+  font-style: normal;
+  border-radius: 50%;
+  background-color: var(--primary-clr);
 }
 
 .about-para {
