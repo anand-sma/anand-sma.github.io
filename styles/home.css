@@ -338,6 +338,13 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  background: linear-gradient(
+    to right bottom,
+    var(--bg1-clr) 0%,
+    var(--primary-clr-t) 10%,
+    var(--primary-clr) 100%
+  );
 }
 
 .about-header {
@@ -349,6 +356,7 @@ a:visited {
 }
 
 .about-body {
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -382,13 +390,9 @@ a:visited {
 }
 
 .about-image-wrap > h2 {
-  color: var(--primary-clr);
-  background: linear-gradient(
-    to right,
-    Transparent,
-    var(--primary-clr-t) 50%,
-    var(--bg1-clr) 80%
-  );
+  color: var(--secondary-clr);
+  background: var(--primary-clr-t);
+  border-radius: 3px;
   cursor: default;
   position: relative;
   overflow: hidden;
@@ -526,4 +530,162 @@ a:visited {
   outline: var(--primary-clr) 2px solid;
   transform: scale(1.1) translate(-1.2rem, -0.5rem);
   box-shadow: 5px 5px 5px var(--primary-clr);
+}
+
+/* contact section */
+
+.contact {
+  background: linear-gradient(
+    to right bottom,
+    var(--bg1-clr) 0%,
+    var(--primary-clr-t) 10%,
+    var(--primary-clr) 100%
+  );
+  min-height: 99vh;
+}
+
+.contact-header {
+  margin: 0.2em;
+  padding: 0.3em;
+  width: 98.5vw;
+  text-align: center;
+  font-size: calc(var(--font-size) + 2.7vw);
+  background-color: var(--primary-clr);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  margin: 3em;
+}
+
+/* //////////////////////////////////////////////////////////////// */
+
+#contact #form {
+  width: 370px;
+  display: flex;
+}
+.send-email {
+  justify-self: flex-start;
+}
+
+#contact #form span {
+  display: block;
+  float: left;
+  width: 100px;
+  padding-top: 5px;
+}
+#contact #form input {
+  float: left;
+  width: 255px;
+  border: 0px;
+  color: var(--secondary-clr);
+  padding: 10px 10px 10px 30px;
+
+  margin-bottom: 10px;
+}
+#contact #form textarea {
+  float: left;
+  border: 0px;
+  width: 255px;
+  height: 140px;
+  padding: 10px 10px 10px 30px;
+
+  color: var(--secondary-clr);
+  resize: none;
+}
+#contact #form input.name {
+  background: var(--primary-clr)
+    url(http://img7.uploadhouse.com/fileuploads/17737/177370145f09fe433945815665aa214f80dbc6af.png)
+    no-repeat 10px 8px;
+}
+#contact #form input.email {
+  background: var(--primary-clr)
+    url(http://img6.uploadhouse.com/fileuploads/17737/177370138cc63992182149e9befabff3eafa6d23.png)
+    no-repeat 10px 9px;
+}
+#contact #form input.captcha {
+  background: var(--primary-clr)
+    url(http://img3.uploadhouse.com/fileuploads/17737/17737011310213e71805ecf2292144cbbecf42ad.png)
+    no-repeat 10px 9px;
+}
+#contact #form textarea.message {
+  background: var(--primary-clr)
+    url(http://img3.uploadhouse.com/fileuploads/17737/1773701229ed8c2f465a8274623ca8976adaf196.png)
+    no-repeat 10px 8px;
+}
+#contact #form input.submit {
+  cursor: pointer;
+  display: block;
+  float: right;
+  height: 2rem;
+  padding: 0 0 0.3em 0;
+  margin: 0.9rem 1rem 0 0;
+
+  background: var(--primary-clr);
+  color: var(--secondary-clr);
+}
+#contact #captcha span {
+  width: 44px;
+}
+#contact #captcha input {
+  background: url(http://img3.uploadhouse.com/fileuploads/17737/17737011310213e71805ecf2292144cbbecf42ad.png)
+    no-repeat scroll 0 0 transparent;
+  margin: 5px 0 0;
+  padding: 0;
+  border: medium none;
+  cursor: pointer;
+  width: 15px;
+}
+/* //////////////////////////////////////////////////////////////// */
+
+/* up arrow */
+.up-arr {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 5000;
+  width: 2rem;
+  height: 1.5rem;
+  border-radius: 3px;
+  outline: var(--secondary-clr) solid 1px;
+  outline-offset: -2px;
+  background-color: var(--primary-clr-t);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.up-arr:hover {
+  transform: scale(1.1);
+}
+
+.arr-wrap {
+  padding: 0.7em 0;
+  transition: all 0.2s;
+}
+.arr-wrap:hover {
+  transform: translateY(-7px);
+  cursor: pointer;
+}
+.arr-wrap:active {
+  transform: translateY(-2px);
+}
+
+.up {
+  width: 2.5rem;
+  height: 1rem;
+  padding: 0.3em 0.5em;
+  outline: var(--secondary-clr) solid 5px;
+  outline-offset: 2px;
+  background: var(--secondary-clr);
+  clip-path: polygon(
+    50% 0%,
+    73.1% 29.8%,
+    55% 30.8%,
+    55.7% 100%,
+    45.2% 100%,
+    44.8% 31%,
+    28.1% 30%
+  );
 }

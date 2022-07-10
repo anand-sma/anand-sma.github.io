@@ -18,12 +18,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="styles/blobz.min.css" />
     <link rel="stylesheet" href="styles/home.css" />
   </head>
   <body>
-    <div class="body-wrap">
+    <div class="body-wrap" id="top">
       <!-- Blob for logo text -->
       <div class="tk-blob logo-blob">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274 303.2">
@@ -167,9 +171,77 @@
         </div>
       </section>
 
-      <section class="contact"></section>
+      <!-- Contact Section -->
+      <section class="contact" id="contact">
+        <div class="contact-header">
+          <h1 class="contact-header-title">Contact Me</h1>
+        </div>
+        <!-- //////////////////////////////////////////////////////////////// -->
+        <div class="content">
+          <div id="form" class="form">
+            <form action="" id="contactForm" method="post">
+              <div class="form-input">
+                <span>Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  class="name"
+                  placeholder="Enter your name"
+                  tabindex="1"
+                />
+
+                <span>Email</span>
+                <input
+                  type="text"
+                  name="email"
+                  class="email"
+                  placeholder="Enter your email"
+                  tabindex="2"
+                />
+
+                <span id="captcha"></span>
+                <input
+                  type="text"
+                  name="captcha"
+                  class="captcha"
+                  maxlength="4"
+                  size="4"
+                  placeholder="Enter captcha code"
+                  tabindex="3"
+                />
+
+                <span>Message</span>
+                <textarea
+                  class="message"
+                  placeholder="Enter your message"
+                  tabindex="4"
+                ></textarea>
+              </div>
+
+              <div class="send-email">
+                <input
+                  type="submit"
+                  name="submit"
+                  value="Send e-mail"
+                  class="submit"
+                  tabindex="5"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- ////////////////////////////////////////////////////////////////// -->
+      </section>
     </div>
 
+    <!-- Top-Go Arrow -->
+    <div class="up-arr">
+      <div class="arr-wrap">
+        <a href="#top"><div class="up"></div></a>
+      </div>
+    </div>
+
+    <script src="./script/captcha.js"></script>
     <script src="./script/app.js"></script>
   </body>
 </html>
