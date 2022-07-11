@@ -82,7 +82,10 @@ $(function () {
       nameFilter.test(nameText) &&
       messageText > 20
     ) {
-      $('#messageSent').append('<h3>Message Delivered Syccessfully</h3>');
+      $('.name').val() = "";
+      $('.email').val() = "";
+      $('.captcha').val() = "";
+      $('.message').val() = "";
     }
   });
 });

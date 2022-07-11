@@ -180,7 +180,7 @@
         <div class="content">
           <div id="form" class="form">
             <form
-              target="_blank"
+              target="_self"
               action="https://formsubmit.co/f08faa58b392c2861a2a15926a483f4d"
               id="contactForm"
               method="POST"
@@ -238,17 +238,23 @@
                   </div>
                   <div>
                     <textarea
+                      name="message"
                       class="message"
-                      placeholder="Enter your message"
+                      placeholder="Enter your message here"
                       tabindex="4"
                     ></textarea>
                   </div>
                 </div>
                 <div>
-                  <input
+                  <!-- <input
                     type="hidden"
                     name="_next"
                     value="https://anand-sma.github.io/thankyou.html"
+                  /> -->
+                  <input
+                    type="hidden"
+                    name="_next"
+                    value="http://127.0.0.1:5500/thankyou.html"
                   />
                 </div>
                 <div class="send-email input">
