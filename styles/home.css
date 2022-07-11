@@ -559,19 +559,45 @@ a:visited {
   margin: 3em;
 }
 
+.email-status {
+  display: flex;
+  justify-content: center;
+}
+.email-status > span {
+  width: fit-content;
+}
+.form-input {
+  background: linear-gradient(
+    to right bottom,
+    var(--bg1-clr) 0%,
+    var(--primary-clr-t) 10%,
+    var(--primary-clr) 100%
+  );
+  padding: 2em 1.5em;
+}
+.input {
+  display: flex;
+}
+
+.send-email > div {
+  width: 100%;
+  margin-top: 1.5em;
+}
+.input-submit {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* //////////////////////////////////////////////////////////////// */
 
 #contact #form {
   width: 370px;
   display: flex;
 }
-.send-email {
-  justify-self: flex-start;
-}
 
 #contact #form span {
   display: block;
-  float: left;
+
   width: 100px;
   padding-top: 5px;
 }
@@ -585,7 +611,6 @@ a:visited {
   margin-bottom: 10px;
 }
 #contact #form textarea {
-  float: left;
   border: 0px;
   width: 255px;
   height: 140px;
@@ -616,11 +641,6 @@ a:visited {
 }
 #contact #form input.submit {
   cursor: pointer;
-  display: block;
-  float: right;
-  height: 2rem;
-  padding: 0 0 0.3em 0;
-  margin: 0.9rem 1rem 0 0;
 
   background: var(--primary-clr);
   color: var(--secondary-clr);

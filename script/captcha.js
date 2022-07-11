@@ -81,9 +81,15 @@ $(function () {
       nameFilter.test(nameText) &&
       messageText > 50
     ) {
-      $('#contactForm').css('display', 'none');
-      $('#form').append('<h2>Message sent!</h2>');
+      // $('#contactForm').css('display', 'none');
+      // $('#form').append('<h2>Message sent!</h2>');
+      $('#messageSent').append('Hello');
       return false;
     }
   });
 });
+
+$('#messageSent').innerHTML = '<h1>Hello</h1>';
+
+// let emailStatus = document.querySelector('.message-sent');
+// emailStatus.innerHTML = 'Hello';

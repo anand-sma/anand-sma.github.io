@@ -179,53 +179,84 @@
         <!-- //////////////////////////////////////////////////////////////// -->
         <div class="content">
           <div id="form" class="form">
-            <form action="" id="contactForm" method="post">
-              <div class="form-input">
-                <span>Name</span>
-                <input
-                  type="text"
-                  name="name"
-                  class="name"
-                  placeholder="Enter your name"
-                  tabindex="1"
-                />
-
-                <span>Email</span>
-                <input
-                  type="text"
-                  name="email"
-                  class="email"
-                  placeholder="Enter your email"
-                  tabindex="2"
-                />
-
-                <span id="captcha"></span>
-                <input
-                  type="text"
-                  name="captcha"
-                  class="captcha"
-                  maxlength="4"
-                  size="4"
-                  placeholder="Enter captcha code"
-                  tabindex="3"
-                />
-
-                <span>Message</span>
-                <textarea
-                  class="message"
-                  placeholder="Enter your message"
-                  tabindex="4"
-                ></textarea>
+            <form
+              action="https://formsubmit.co/mymailforalllogs@gmail.com"
+              id="contactForm"
+              method="POST"
+            >
+              <div class="email-status">
+                <span id="messageSent">email status</span>
               </div>
 
-              <div class="send-email">
-                <input
-                  type="submit"
-                  name="submit"
-                  value="Send e-mail"
-                  class="submit"
-                  tabindex="5"
-                />
+              <div class="form-input">
+                <div class="input-name input">
+                  <div><span>Name</span></div>
+                  <div>
+                    <input
+                      type="text"
+                      name="name"
+                      class="name"
+                      placeholder="Enter your name"
+                      tabindex="1"
+                    />
+                  </div>
+                </div>
+
+                <div class="input-email input">
+                  <div>
+                    <span>Email</span>
+                  </div>
+                  <div>
+                    <input
+                      type="email"
+                      name="email"
+                      class="email"
+                      placeholder="Enter your email"
+                      tabindex="2"
+                    />
+                  </div>
+                </div>
+
+                <div class="input-captcha input">
+                  <div>
+                    <span id="captcha"></span>
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      name="captcha"
+                      class="captcha"
+                      maxlength="4"
+                      size="4"
+                      placeholder="Enter captcha code"
+                      tabindex="3"
+                    />
+                  </div>
+                </div>
+
+                <div class="input-message input">
+                  <div>
+                    <span>Message</span>
+                  </div>
+                  <div>
+                    <textarea
+                      class="message"
+                      placeholder="Enter your message"
+                      tabindex="4"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="send-email input">
+                  <div class="input-submit">
+                    <input
+                      type="submit"
+                      name="submit"
+                      value="Send e-mail"
+                      class="submit"
+                      tabindex="5"
+                    />
+                  </div>
+                </div>
               </div>
             </form>
           </div>
