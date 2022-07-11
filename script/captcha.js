@@ -13,6 +13,7 @@ function captchaCode() {
       Code +
       "</span><input type='button' onclick='captchaCode();'>"
   );
+  $('#captcha span').css('filter', 'blur: 50%');
 }
 
 $(function () {
@@ -27,7 +28,7 @@ $(function () {
       });
     } else {
       $('.captcha').css({
-        color: '#CE3B46',
+        color: '#f00',
       });
     }
 
@@ -40,7 +41,7 @@ $(function () {
       });
     } else {
       $('.email').css({
-        color: '#CE3B46',
+        color: '#f00',
       });
     }
 
@@ -52,18 +53,18 @@ $(function () {
       });
     } else {
       $('.name').css({
-        color: '#CE3B46',
+        color: '#f00',
       });
     }
 
     var messageText = $('.message').val().length;
-    if (messageText > 50) {
+    if (messageText > 20) {
       $('.message').css({
         color: '#609D29',
       });
     } else {
       $('.message').css({
-        color: '#CE3B46',
+        color: '#f00',
       });
     }
 
@@ -71,7 +72,7 @@ $(function () {
       captchaVal !== captchaCode ||
       !emailFilter.test(emailText) ||
       !nameFilter.test(nameText) ||
-      messageText < 50
+      messageText < 20
     ) {
       return false;
     }
@@ -79,17 +80,9 @@ $(function () {
       captchaVal == captchaCode &&
       emailFilter.test(emailText) &&
       nameFilter.test(nameText) &&
-      messageText > 50
+      messageText > 20
     ) {
-      // $('#contactForm').css('display', 'none');
-      // $('#form').append('<h2>Message sent!</h2>');
-      $('#messageSent').append('Hello');
-      return false;
+      $('#messageSent').append('<h3>Message Delivered Syccessfully</h3>');
     }
   });
 });
-
-$('#messageSent').innerHTML = '<h1>Hello</h1>';
-
-// let emailStatus = document.querySelector('.message-sent');
-// emailStatus.innerHTML = 'Hello';

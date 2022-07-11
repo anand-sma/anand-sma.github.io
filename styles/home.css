@@ -545,9 +545,9 @@ a:visited {
 }
 
 .contact-header {
-  margin: 0.2em;
+  margin: 0.07em;
   padding: 0.3em;
-  width: 98.5vw;
+  width: 98vw;
   text-align: center;
   font-size: calc(var(--font-size) + 2.7vw);
   background-color: var(--primary-clr);
@@ -559,12 +559,15 @@ a:visited {
   margin: 3em;
 }
 
+.form {
+  border-left: var(--primary-clr) solid 2rem;
+}
 .email-status {
   display: flex;
   justify-content: center;
 }
 .email-status > span {
-  width: fit-content;
+  width: ;
 }
 .form-input {
   background: linear-gradient(

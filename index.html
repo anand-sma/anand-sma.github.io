@@ -180,14 +180,11 @@
         <div class="content">
           <div id="form" class="form">
             <form
-              action="https://formsubmit.co/mymailforalllogs@gmail.com"
+              target="_blank"
+              action="https://formsubmit.co/f08faa58b392c2861a2a15926a483f4d"
               id="contactForm"
               method="POST"
             >
-              <div class="email-status">
-                <span id="messageSent">email status</span>
-              </div>
-
               <div class="form-input">
                 <div class="input-name input">
                   <div><span>Name</span></div>
@@ -198,6 +195,7 @@
                       class="name"
                       placeholder="Enter your name"
                       tabindex="1"
+                      required
                     />
                   </div>
                 </div>
@@ -213,6 +211,7 @@
                       class="email"
                       placeholder="Enter your email"
                       tabindex="2"
+                      required
                     />
                   </div>
                 </div>
@@ -226,10 +225,9 @@
                       type="text"
                       name="captcha"
                       class="captcha"
-                      maxlength="4"
-                      size="4"
                       placeholder="Enter captcha code"
                       tabindex="3"
+                      required
                     />
                   </div>
                 </div>
@@ -246,12 +244,19 @@
                     ></textarea>
                   </div>
                 </div>
+                <div>
+                  <input
+                    type="hidden"
+                    name="_next"
+                    value="http://127.0.0.1:5500//thankyou.html"
+                  />
+                </div>
                 <div class="send-email input">
                   <div class="input-submit">
                     <input
                       type="submit"
                       name="submit"
-                      value="Send e-mail"
+                      value="Submit"
                       class="submit"
                       tabindex="5"
                     />

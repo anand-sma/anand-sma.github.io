@@ -1,0 +1,59 @@
+:root {
+  --primary-clr: #092834; /*Maastricht Blue*/
+  --primary-clr-t: #09283455; /*Transparent Maastricht Blue*/
+  --secondary-clr: #fff; /*Full White*/
+  --secondary2-clr: #cfcfcf;
+  --bg1-clr: #347b98; /*Teal Blue*/
+  --bg2-clr: #1489b8; /*Cyan Cornflower Blue*/
+  --font-size: 12px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body-wrap {
+  min-width: max-content;
+  min-height: 100vh;
+  background: linear-gradient(
+      to right bottom,
+      var(--bg1-clr) 0%,
+      var(--primary-clr-t) 10%,
+      var(--primary-clr) 100%
+    )
+    no-repeat;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.body-wrap span {
+  color: var(--secondary2-clr);
+}
+
+a:link,
+a:visited {
+  color: var(--secondary-clr);
+  text-decoration: none;
+  box-shadow: 1px 1px 1.5rem var(--bg1-clr);
+}
+a {
+  padding: 0.5em 5em;
+  border-radius: 3px;
+  background: var(--primary-clr);
+}
+
+.thanku {
+  transform: translateY(-5rem);
+}
+
+.thanku > h1 {
+  color: var(--primary-clr);
+}
+.thanku > div {
+  margin-top: 1em;
+  text-align: center;
+}
