@@ -13,7 +13,6 @@ function captchaCode() {
       Code +
       "</span><input type='button' onclick='captchaCode();'>"
   );
-  $('#captcha span').css('filter', 'blur: 50%');
 }
 
 $(function () {
@@ -75,17 +74,6 @@ $(function () {
       messageText < 20
     ) {
       return false;
-    }
-    if (
-      captchaVal == captchaCode &&
-      emailFilter.test(emailText) &&
-      nameFilter.test(nameText) &&
-      messageText > 20
-    ) {
-      $('.name').val() = "";
-      $('.email').val() = "";
-      $('.captcha').val() = "";
-      $('.message').val() = "";
     }
   });
 });
